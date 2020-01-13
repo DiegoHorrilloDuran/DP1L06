@@ -1,6 +1,6 @@
 <%--
 - menu.jsp
--
+- 
 - Copyright (c) 2019 Rafael Corchuelo.
 -
 - In keeping with the traditional purpose of furthering education and research, it is
@@ -136,11 +136,7 @@
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create" />
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.provider.request.create" action="/provider/request_/create" />
-			<acme:menu-separator />
-		</acme:menu-option>
+		
 
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
 			<acme:menu-suboption code="master.menu.sponsor.banner.commercial.list" action="/sponsor/commercial-banner/list" />
@@ -181,6 +177,10 @@
 				access="!hasRole('Provider')" />
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update"
 				access="hasRole('Provider')" />
+			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create"
+				access="!hasRole('Consumer')" />
+			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update"
+				access="hasRole('Consumer')" />
 			<acme:menu-suboption code="master.menu.user-account.become-employer" action="/authenticated/employer/create"
 				access="!hasRole('Employer')" />
 			<acme:menu-suboption code="master.menu.user-account.employer" action="/authenticated/employer/update"
