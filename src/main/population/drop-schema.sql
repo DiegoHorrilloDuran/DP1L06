@@ -43,10 +43,6 @@
        drop 
        foreign key FK_q9id3wc65gg49afc5tlr1c00n;
 
-    alter table `consumer` 
-       drop 
-       foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
-
     alter table `descriptor` 
        drop 
        foreign key `FKgfulfilmwi4hhaquiu7fr5g0g`;
@@ -120,8 +116,6 @@
     drop table if exists `commercial_banner`;
 
     drop table if exists `company_record`;
-
-    drop table if exists `consumer`;
 
     drop table if exists `customization`;
 
