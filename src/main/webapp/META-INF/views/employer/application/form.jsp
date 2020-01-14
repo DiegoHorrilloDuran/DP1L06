@@ -18,8 +18,8 @@
 <acme:form>
 	<acme:form-textbox code="employer.application.form.label.reference" path="reference"/>
 	<acme:form-textbox code="employer.application.form.label.creationMoment" path="creationMoment"/>
-	<acme:form-money code="employer.application.form.label.statement" path="statement"/>
-	<acme:form-url code="employer.application.form.label.skills" path="skills"/>
+	<acme:form-textbox code="employer.application.form.label.statement" path="statement"/>
+	<acme:form-textbox code="employer.application.form.label.skills" path="skills"/>
 	<acme:form-textarea code="employer.application.form.label.qualifications" path="qualifications"/>
 	<acme:form-textbox code="employer.application.form.label.job.reference" path="job.reference"/>
 	

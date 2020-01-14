@@ -82,11 +82,6 @@ master.menu.administrator.company-record.create = Create Company Record
 master.menu.administrator.create = Creates to Administrator
 master.menu.administrator.list = Lists to Administrator
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-master.menu.provider.request.create = Create Request
 
 # master.menu.consumer ##########################################################
 
@@ -117,8 +112,6 @@ master.menu.auditor.job.list_other = Jobs wich i have not written records
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.employer = Employer data
