@@ -639,6 +639,35 @@
 	<bean name="worker1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="worker1UserAccount"/>
 	</bean>
+	
+	<bean name="worker2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker2"/>	
+		<property name="password" value="worker2"/>
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Two" />
+				<property name="email" value="worker2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker2Worker"/>
+				<ref bean="worker2Authenticated"/>
+			</list>
+		</property>	
+	</bean>
+
+	<bean name="worker2Worker" class="acme.entities.roles.Worker">
+		<property name="qualificationRecord" value="Excellent"/>
+		<property name="skillsRecord" value="Java,C++"/>
+		<property name="userAccount" ref="worker2UserAccount"/>
+	</bean>
+
+	<bean name="worker2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker2UserAccount"/>
+	</bean>
 
 	<!-- Sponsors -->
 
@@ -834,10 +863,6 @@
 		<property name="job" ref="job1"/>
 		<property name="worker" ref="worker1Worker"/>
 	</bean>
-	<bean id="descriptor1" class="acme.entities.descriptors.Descriptor">
-	<property name="description" value="DESC1-JOB1"/>
-	<property name="job" ref="job1"/>
-	</bean>
 	
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="reference" value="EMPR-JOBR:WORR" />
@@ -851,7 +876,7 @@
 	</bean>
 	
 	<bean name="application3" class="acme.entities.applications.Application">
-		<property name="reference" value="EMPT-JOBT:WORT" />
+		<property name="reference" value="EMPT-JOBT:WORR" />
 		<property name="creationMoment" value="2019/11/30 23:59"/>
 		<property name="status" value="pending"/>
 		<property name="statement" value="Lorem ipsum sit dolor amet."/>
@@ -861,7 +886,34 @@
 		<property name="worker" ref="worker1Worker"/>
 	</bean>
 	
+	<bean name="application4" class="acme.entities.applications.Application">
+		<property name="reference" value="EMPP-JOBB:WORT" />
+		<property name="creationMoment" value="2019/12/30 23:59"/>
+		<property name="status" value="pending"/>
+		<property name="statement" value="Lorem ipsum sit dolor amet."/>
+		<property name="skills" value="Lorem"/>
+		<property name="qualifications" value="Lorem"/>
+		<property name="job" ref="job1"/>
+		<property name="worker" ref="worker2Worker"/>
+	</bean>
+
+	<bean name="application5" class="acme.entities.applications.Application">
+		<property name="reference" value="EMPR-JOBR:WORT" />
+		<property name="creationMoment" value="2019/12/30 22:59"/>
+		<property name="status" value="pending"/>
+		<property name="statement" value="Lorem ipsum sit dolor amet."/>
+		<property name="skills" value="Lorem"/>
+		<property name="qualifications" value="Lorem"/>
+		<property name="job" ref="job2"/>
+		<property name="worker" ref="worker2Worker"/>
+	</bean>
+	
 	<!-- DESCRIPTOR -->
+	
+	<bean id="descriptor1" class="acme.entities.descriptors.Descriptor">
+	<property name="description" value="DESC1-JOB1"/>
+	<property name="job" ref="job1"/>
+	</bean>
 	
 	<bean id="descriptor2" class="acme.entities.descriptors.Descriptor">
 	<property name="description" value="DESC1-JOB2"/>
