@@ -67,10 +67,6 @@
        drop 
        foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
 
-    alter table `provider` 
-       drop 
-       foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
-
     alter table `sponsor` 
        drop 
        foreign key FK_20xk0ev32hlg96kqynl6laie2;
@@ -144,8 +140,6 @@
     drop table if exists `offer`;
 
     drop table if exists `perez_bulletin`;
-
-    drop table if exists `provider`;
 
     drop table if exists `request_`;
 
