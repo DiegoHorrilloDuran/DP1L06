@@ -50,7 +50,7 @@ public class Phone extends DomainDatatype {
 		}
 
 		result.append(this.number);
-		result.append("\\");
+		result.append(">>");
 
 		return result.toString();
 	}

@@ -1173,8 +1173,8 @@
 
 	<bean id="phone1" class="acme.datatypes.Phone">
 		<property name="countryCode" value="111" />
-		<property name="areaCode" value="111" />
-		<property name="number" value="666666666" />
+		<property name="areaCode" value="0345" />
+		<property name="number" value="678-900" />
 	</bean>
 
 	<bean id="phone2" class="acme.datatypes.Phone">
